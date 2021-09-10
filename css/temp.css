@@ -1,0 +1,417 @@
+/*
+	Trip Planner Project
+
+	Developer: Junghwan Kim (Junghwan_Kim@student.uml.edu), Rotana Nou (Rotana_Nou@student.uml.edu)
+	Affiliation: University of Massachusetts Lowell: COMP.4610 GUI PROGRAMMING II
+
+	Date: 05/02/2017
+	Reference: w3schools.com, googlemapi.com, tripadvisor.com
+
+	Copyright © 2017 Junghwan Kim, Rotana Nou. All rights reserved.
+*/
+/*set the properties and style body*/
+/*customize body*/
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	max-width:100%;
+	min-width: 1080px;
+	line-height: 25px;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+/*customize header*/
+h3,h4,h5 {
+	font-family: "Raleway", sans-serif;
+}
+/*customize tripplanner logo*/
+.let_top {
+	background-color: white;
+	position: fixed;
+	width: 100vw;
+	min-width: 1080px;
+	height: 60px;
+	font-family: sans-serif;
+	border-bottom: 0.3px solid #A9A9A9;
+	box-shadow: 1px 1px 1px #888888;
+	line-height: 25px;
+}
+/*left trip logo*/
+.home_nav {
+	float: left;
+	text-decoration: none;
+	padding-left: 15px;
+	color: black;
+	font-size: 35px;
+}
+/*customize home hover*/
+a.home_nav:hover{
+	color: #7acdff;
+	background-color: rgba(0,0,0,0.5);
+}
+/*right menu bar*/
+.right_top {
+	float: right;
+	padding: 20px;
+}
+/*customize right a*/
+.right_top a {
+	text-decoration: none;
+	padding: 25px;
+	color: black;
+	margin: 0;
+}
+.right_top a:hover {
+	color: #7acdff;
+	background-color: rgba(0,0,0,0.5);
+}
+
+/*section main*/
+.main {
+	background-color: #778899;
+	color: white;
+}
+/*customize home*/
+#home {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	margin-top:0px;
+}
+.main_content {
+	text-align: center;
+	padding: 200px;
+}
+.main_content .m1 {
+	font-size: 40px;
+}
+/*set property of plan trip button*/
+.main_content p{
+	border-radius: 40px 40px 40px 40px;
+	background-color: green;
+	text-align: center;
+	border: 1px solid;
+	padding: 10px 40px;
+	margin-left: 210px;
+	width: 300px;
+	position: absolute;
+}
+.main_content a {
+	text-decoration: none;
+	color: white;
+}
+.social_icon {
+	float: right;
+	padding: 10px;
+	padding-right: 40px;
+}
+.social_icon a {
+	color: white;
+}
+/*about section*/
+.team_con {
+	height: 300px;
+	text-align: center;
+}
+.about_us {
+	padding-top: 1px;
+	text-align: center;
+}
+#about {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 140vh;
+	margin-top:0px;
+	overflow: hidden;;
+	text-align: center;
+	color: white;
+}
+.about_us {
+	background-image: url("../images/back1.jpg");
+}
+.h3_about {
+	font-size: 30px;
+	padding-top: 50px;
+	text-align: center;
+}
+.p1 {
+	font-size: 13px;
+	text-align: center;
+}
+.story img {
+	border-radius: 40px;
+	float: right;
+	margin-left: 20px;
+	margin-right: 50px;
+	height: 200px;
+	text-align: center;
+}
+.h4_about {
+	font-size: 25px;
+	height: 2px;
+	text-align: center;
+}
+.h5_about {
+	font-size: 19px;
+	text-align: center;
+}
+.p2 {
+	font-size: 15px;
+	text-align: center;
+	padding-left: 30px;
+}
+.h3_team {
+	padding-top: 20px;
+	padding-left: 20px;
+	text-align: center;
+}
+.p1_team {
+	padding-top: 20px;
+	padding-left: 20px;
+	text-align: center;
+}
+/*profile card mem1*/
+.first_mem {
+	float: left;
+	padding-left: 270px;
+	text-align: center;
+}
+.mem1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.mem1_info {
+  padding: 0 16px;
+}
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.title {
+  color: grey;
+  font-size: 18px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a:not(.navtext):not(.active) {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+/*member2 profile*/
+.second_mem {
+	padding-left: 360px;
+}
+.mem2 img {
+	height: 188px;
+}
+.mem2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.mem2_info {
+  padding: 0 16px;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+/*end section*/
+/*gallery section*/
+.whole_gal {
+	background-color: white;
+	padding-top: 1px;
+	width: 100%;
+	text-align: center;
+}
+#gallery {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 101vh;
+	margin-top:0px;
+	text-align: center;
+}
+.h3_gal {
+	font-size: 30px;
+	padding-top: 50px;
+	text-align: center;
+}
+.p1_gal {
+	text-align: center;
+	padding-bottom: 0px;
+}
+.left_gal div {
+	text-align: center;
+	display: inline-block;
+}
+.right_gal div {
+	text-align: center;
+	display: inline-block;
+}
+.pic1_gal img{
+	width: 240px;
+	height: 163px;
+	padding-left: 40px;
+}
+.pic2_gal img {
+	width: 240px;
+	height: 163px;
+
+}
+.pic3_gal img {
+	width: 240px;
+	height: 163px;
+
+}
+.pic4_gal img {
+	width: 240px;
+	height: 163px;
+
+}
+.pic5_gal img {
+	width: 240px;
+	height: 163px;
+	padding-left: 40px;
+}
+.pic6_gal img {
+	width: 240px;
+	height: 163px;
+}
+.pic6_gal img {
+	width: 240px;
+	height: 163px;
+}
+.pic7_gal img {
+	width: 240px;
+	height: 163px;
+}
+.pic8_gal img {
+	width: 240px;
+	height: 163px;
+}
+/*end gallery*/
+.contact_contain {
+	background-color: white;
+	padding-top: 1px;
+}
+.h3_contact {
+	font-size: 30px;
+	padding-top: 50px;
+	text-align: center;
+}
+#contact {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 103vh;
+	margin-top:0px;
+}
+.contact_contain {
+	background-image: url("../images/contactimage.jpg");
+}
+.p1_contact {
+	text-align: center;
+	padding-bottom: 0px;
+}
+.left_info {
+	padding-left: 36px;
+	float: left;
+}
+.email_all {
+	color: blue;
+	font-size: 16px;
+}
+input[type=text] {
+	width: 100%;
+	padding: 7px 10px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+.email_button {
+	width: 300px;
+	color: white;
+	background-color: red;
+	padding: 10px;
+	margin-left: 50px;
+}
+
+/*end contact */
+/*customize map*/
+#map {
+	float: right;
+	margin-right: 50px;
+}
+/*customize footer*/
+.page_footer {
+	background-color: #A9A9A9;
+	height: 30vh;
+	text-align: center;
+	color: white;
+}
+.foot {
+	padding-top: 24px;
+}
+.arrow_but {
+	color: white;
+	text-align: center;
+	border: 134px 43px;
+	background-color: #1E90FF;
+	padding: 10px;
+	font-size: 16px;
+}
+.icon {
+	padding-top: 27px;
+}
+a.sponser:hover {
+	color: #1E90FF
+}

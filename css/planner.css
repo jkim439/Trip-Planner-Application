@@ -1,0 +1,168 @@
+/*
+	Trip Planner Project
+
+	Developer: Junghwan Kim (Junghwan_Kim@student.uml.edu), Rotana Nou (Rotana_Nou@student.uml.edu)
+	Affiliation: University of Massachusetts Lowell: COMP.4610 GUI PROGRAMMING II
+
+	Date: 05/02/2017
+	Reference: w3schools.com, googlemapi.com, tripadvisor.com
+
+	Copyright © 2017 Junghwan Kim, Rotana Nou. All rights reserved.
+*/
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	line-height: 25px;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+.overlay {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	z-index:1000;
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	text-align: center;
+	display:table-cell;
+	vertical-align:middle;
+	visibility: hidden;
+	cursor: wait;
+}
+nav {
+	z-index: 0;
+	position: fixed;
+	width: 100vw;
+	min-width: 600px;
+	font-size: 14px;
+	color: red;
+	font-weight: bold;
+	text-align: right;
+}
+nav ul {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	list-style-type: none;
+	background-color: rgba(0,0,0,0.4);
+}
+nav li {
+	float: right;
+}
+nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px 40px;
+	text-decoration: none;
+}
+nav li a:not(.warning):hover {
+	color: #7acdff;
+	background-color: rgba(0,0,0,0.6);
+}
+nav li a.warning:hover	{
+	color: white;
+	background-color: red;
+}
+nav li .active {
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.3);
+}
+nav li .warning {
+	color: red;
+	font-weight: bold;
+}
+
+section {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+section .top {
+	height: 200px;
+}
+section img {
+	width: 0px;
+	height: 0px;
+	visibility: hidden;
+}
+.left {
+	width: 50vw;
+	height: 100vh;
+	float: left;
+}
+.right {
+	width: 50vw;
+	height: 100vh;
+	float: right;
+	background-image: url('../img/background_usa.jpg');
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+.navMargin {
+	height: 57px;
+}
+h2 {
+	font-size: 130%;
+	margin-left: 10px;
+}
+table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	border-spacing: 0;
+}
+th, td {
+	border: 1px solid transparent;
+}
+th {
+	font-size: 95%;
+	height: 40px;
+	background-color: #50b3ff;
+	font-weight: bold;
+	text-align: center;
+}
+.cell1 {
+	cursor: pointer;
+}
+.cell2 {
+	border-bottom: 1pt solid black;
+	cursor: pointer;
+}
+tr:hover {
+	background-color: #cee9ff;
+}
+td {
+	font-size: 85%;
+	height: 30px;
+}
+td a {
+	color: inherit;
+}
+.icon {
+	width: 18px;
+	height: 18px;
+	vertical-align: text-top;
+}
+.placeName {
+	font-weight: bold;
+}
+.placeAddress {
+	font-size: 95%;
+}
+span.save {
+	font-size: 90%;
+	margin-left: 30px;
+}
+span.copied {
+	font-size: 85%;
+	color: green;
+	font-weight: bold;
+}
+.email {
+	width: 278px;
+}
